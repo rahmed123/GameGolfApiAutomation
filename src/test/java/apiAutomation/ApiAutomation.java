@@ -33,7 +33,6 @@ public class ApiAutomation
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent;
 	public ExtentTest test; 
-    public String test1= "123";
     
 	
 	//Getting Session cookies and Creating Object for Extent Report
