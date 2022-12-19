@@ -1,0 +1,66 @@
+[RemoteTestNG] detected TestNG version 7.6.0
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+PHPSESSID=8qogvr9o07vt20johhlivnc296; gygUser=9a306b4f08ac2555e3de0f9fbc6573abcf0f5d2ba%3A4%3A%7Bi%3A0%3Bi%3A218263%3Bi%3A1%3Bs%3A11%3A%22briansexton%22%3Bi%3A2%3Bi%3A2592000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D
+Response Code for Testcase 1: 200
+User id for Testcase 1: 218263
+Response Code for Testcase 2: 200
+Response Code for Testcase 3: 200
+Response Code for Testcase 4: 200
+Response Code for Testcase 5 200
+Response Code for Testcase 6 200
+Response Code for Testcase 7 200
+Response Code for Testcase 8 200
+Response Code for Testcase 9 200
+Response Code for Testcase 10 200
+Response Code for Testcase 11 200
+Response Code for Testcase 12 200
+Response Code for Testcase 13 200
+Response Code for Testcase 14 200
+Response Code for Testcase 15 200
+Response Code for Testcase 16 200
+Response Code for Testcase 17 200
+Response Code for Testcase 18 200
+Response Code for Testcase 19 200
+Response Code for Testcase 20 200
+Response Code for Testcase 21 200
+Response Code for Testcase 22 200
+Response Code for Testcase 23 200
+Response Code for Testcase 24 200
+PASSED: apiAutomation.ApiAutomation.TC0009_GETFollowers
+PASSED: apiAutomation.ApiAutomation.TC0004_GETActivityFeed
+PASSED: apiAutomation.ApiAutomation.TC0021_GETStrokeGainLastRound
+PASSED: apiAutomation.ApiAutomation.TC0018_GETGolfCourseRounds
+PASSED: apiAutomation.ApiAutomation.TC0008_GETFollowings
+PASSED: apiAutomation.ApiAutomation.TC0016_GETGolfCourse
+PASSED: apiAutomation.ApiAutomation.TC0015_GETCompareLastTenRounds
+PASSED: apiAutomation.ApiAutomation.TC0022_GETStrokeGainLastRound
+PASSED: apiAutomation.ApiAutomation.TC0002_GETRoundStats
+PASSED: apiAutomation.ApiAutomation.TC0006_GETComments
+PASSED: apiAutomation.ApiAutomation.TC0023_GETApproachMissLastRound
+PASSED: apiAutomation.ApiAutomation.TC0017_GETGolfCoursePlayers
+PASSED: apiAutomation.ApiAutomation.TC0019_GETGolfCourseNearby
+PASSED: apiAutomation.ApiAutomation.TC0020_GETGolfCourseActivities
+PASSED: apiAutomation.ApiAutomation.TC00013_POSTSearchPlayer
+PASSED: apiAutomation.ApiAutomation.TC0005_GETRecommendedUsers
+PASSED: apiAutomation.ApiAutomation.TC0012_GETPro
+PASSED: apiAutomation.ApiAutomation.TC0014_GETCompareAllRounds
+PASSED: apiAutomation.ApiAutomation.TC0024_GETApproachMissLastRound
+PASSED: apiAutomation.ApiAutomation.TC0003_GETUserAttribute
+PASSED: apiAutomation.ApiAutomation.TC0011_GETPro
+PASSED: apiAutomation.ApiAutomation.TC0010_GETPro
+PASSED: apiAutomation.ApiAutomation.TC0001_GETUserStats
+PASSED: apiAutomation.ApiAutomation.TC0007_POSTComments
+
+===============================================
+    Default test
+    Tests run: 24, Failures: 0, Skips: 0
+===============================================
+
+
+===============================================
+Default suite
+Total tests run: 24, Passes: 24, Failures: 0, Skips: 0
+===============================================
+
