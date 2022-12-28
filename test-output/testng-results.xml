@@ -2,132 +2,132 @@
 <testng-results ignored="0" total="29" passed="29" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-26T11:11:57 PKT" name="Default suite" finished-at="2022-12-26T11:12:35 PKT" duration-ms="37440">
+  <suite started-at="2022-12-27T12:58:42 PKT" name="Default suite" finished-at="2022-12-27T12:59:25 PKT" duration-ms="43340">
     <groups>
     </groups>
-    <test started-at="2022-12-26T11:11:57 PKT" name="Default test" finished-at="2022-12-26T11:12:35 PKT" duration-ms="37440">
+    <test started-at="2022-12-27T12:58:42 PKT" name="Default test" finished-at="2022-12-27T12:59:25 PKT" duration-ms="43340">
       <class name="apiAutomation.ApiAutomation">
-        <test-method is-config="true" signature="POSTLoginUser()[pri:0, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:11:58 PKT" name="POSTLoginUser" finished-at="2022-12-26T11:12:00 PKT" duration-ms="2079" status="PASS">
+        <test-method is-config="true" signature="POSTLoginUser()[pri:0, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:58:42 PKT" name="POSTLoginUser" finished-at="2022-12-27T12:58:44 PKT" duration-ms="1813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- POSTLoginUser -->
-        <test-method signature="TC0001_GETUserStats()[pri:1, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:00 PKT" name="TC0001_GETUserStats" finished-at="2022-12-26T11:12:01 PKT" duration-ms="1011" status="PASS">
+        <test-method signature="TC0001_GETUserStats()[pri:1, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:58:44 PKT" name="TC0001_GETUserStats" finished-at="2022-12-27T12:58:45 PKT" duration-ms="1084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0001_GETUserStats -->
-        <test-method signature="TC0002_GETRoundStats()[pri:2, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:01 PKT" name="TC0002_GETRoundStats" finished-at="2022-12-26T11:12:12 PKT" duration-ms="11402" status="PASS">
+        <test-method signature="TC0002_GETRoundStats()[pri:2, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:58:45 PKT" name="TC0002_GETRoundStats" finished-at="2022-12-27T12:58:54 PKT" duration-ms="9298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0002_GETRoundStats -->
-        <test-method signature="TC0003_GETUserAttribute()[pri:3, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:12 PKT" name="TC0003_GETUserAttribute" finished-at="2022-12-26T11:12:13 PKT" duration-ms="984" status="PASS">
+        <test-method signature="TC0003_GETUserAttribute()[pri:3, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:58:54 PKT" name="TC0003_GETUserAttribute" finished-at="2022-12-27T12:58:56 PKT" duration-ms="1678" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0003_GETUserAttribute -->
-        <test-method signature="TC0004_GETActivityFeed()[pri:4, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:13 PKT" name="TC0004_GETActivityFeed" finished-at="2022-12-26T11:12:15 PKT" duration-ms="1503" status="PASS">
+        <test-method signature="TC0004_GETActivityFeed()[pri:4, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:58:56 PKT" name="TC0004_GETActivityFeed" finished-at="2022-12-27T12:59:01 PKT" duration-ms="4930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0004_GETActivityFeed -->
-        <test-method signature="TC0005_GETRecommendedUsers()[pri:5, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:15 PKT" name="TC0005_GETRecommendedUsers" finished-at="2022-12-26T11:12:15 PKT" duration-ms="542" status="PASS">
+        <test-method signature="TC0005_GETRecommendedUsers()[pri:5, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:01 PKT" name="TC0005_GETRecommendedUsers" finished-at="2022-12-27T12:59:02 PKT" duration-ms="566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0005_GETRecommendedUsers -->
-        <test-method signature="TC0006_GETComments()[pri:6, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:15 PKT" name="TC0006_GETComments" finished-at="2022-12-26T11:12:16 PKT" duration-ms="485" status="PASS">
+        <test-method signature="TC0006_GETComments()[pri:6, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:02 PKT" name="TC0006_GETComments" finished-at="2022-12-27T12:59:02 PKT" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0006_GETComments -->
-        <test-method signature="TC0007_POSTComments()[pri:7, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:16 PKT" name="TC0007_POSTComments" finished-at="2022-12-26T11:12:16 PKT" duration-ms="660" status="PASS">
+        <test-method signature="TC0007_POSTComments()[pri:7, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:02 PKT" name="TC0007_POSTComments" finished-at="2022-12-27T12:59:03 PKT" duration-ms="636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0007_POSTComments -->
-        <test-method signature="TC0008_GETFollowings()[pri:8, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:16 PKT" name="TC0008_GETFollowings" finished-at="2022-12-26T11:12:17 PKT" duration-ms="882" status="PASS">
+        <test-method signature="TC0008_GETFollowings()[pri:8, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:03 PKT" name="TC0008_GETFollowings" finished-at="2022-12-27T12:59:04 PKT" duration-ms="890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0008_GETFollowings -->
-        <test-method signature="TC0009_GETFollowers()[pri:9, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:17 PKT" name="TC0009_GETFollowers" finished-at="2022-12-26T11:12:18 PKT" duration-ms="473" status="PASS">
+        <test-method signature="TC0009_GETFollowers()[pri:9, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:04 PKT" name="TC0009_GETFollowers" finished-at="2022-12-27T12:59:04 PKT" duration-ms="468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0009_GETFollowers -->
-        <test-method signature="TC0010_GETPro()[pri:10, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:18 PKT" name="TC0010_GETPro" finished-at="2022-12-26T11:12:18 PKT" duration-ms="478" status="PASS">
+        <test-method signature="TC0010_GETPro()[pri:10, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:04 PKT" name="TC0010_GETPro" finished-at="2022-12-27T12:59:05 PKT" duration-ms="482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0010_GETPro -->
-        <test-method signature="TC0011_GETPro()[pri:11, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:18 PKT" name="TC0011_GETPro" finished-at="2022-12-26T11:12:19 PKT" duration-ms="489" status="PASS">
+        <test-method signature="TC0011_GETPro()[pri:11, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:05 PKT" name="TC0011_GETPro" finished-at="2022-12-27T12:59:05 PKT" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0011_GETPro -->
-        <test-method signature="TC0012_GETPro()[pri:12, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:19 PKT" name="TC0012_GETPro" finished-at="2022-12-26T11:12:19 PKT" duration-ms="499" status="PASS">
+        <test-method signature="TC0012_GETPro()[pri:12, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:05 PKT" name="TC0012_GETPro" finished-at="2022-12-27T12:59:06 PKT" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0012_GETPro -->
-        <test-method signature="TC00013_POSTSearchPlayer()[pri:13, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:19 PKT" name="TC00013_POSTSearchPlayer" finished-at="2022-12-26T11:12:20 PKT" duration-ms="688" status="PASS">
+        <test-method signature="TC00013_POSTSearchPlayer()[pri:13, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:06 PKT" name="TC00013_POSTSearchPlayer" finished-at="2022-12-27T12:59:06 PKT" duration-ms="689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC00013_POSTSearchPlayer -->
-        <test-method signature="TC0014_GETCompareAllRounds()[pri:14, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:20 PKT" name="TC0014_GETCompareAllRounds" finished-at="2022-12-26T11:12:20 PKT" duration-ms="489" status="PASS">
+        <test-method signature="TC0014_GETCompareAllRounds()[pri:14, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:06 PKT" name="TC0014_GETCompareAllRounds" finished-at="2022-12-27T12:59:07 PKT" duration-ms="488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0014_GETCompareAllRounds -->
-        <test-method signature="TC0015_GETCompareLastTenRounds()[pri:15, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:20 PKT" name="TC0015_GETCompareLastTenRounds" finished-at="2022-12-26T11:12:21 PKT" duration-ms="483" status="PASS">
+        <test-method signature="TC0015_GETCompareLastTenRounds()[pri:15, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:07 PKT" name="TC0015_GETCompareLastTenRounds" finished-at="2022-12-27T12:59:07 PKT" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0015_GETCompareLastTenRounds -->
-        <test-method signature="TC0016_GETGolfCourse()[pri:16, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:21 PKT" name="TC0016_GETGolfCourse" finished-at="2022-12-26T11:12:22 PKT" duration-ms="1222" status="PASS">
+        <test-method signature="TC0016_GETGolfCourse()[pri:16, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:07 PKT" name="TC0016_GETGolfCourse" finished-at="2022-12-27T12:59:09 PKT" duration-ms="1197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0016_GETGolfCourse -->
-        <test-method signature="TC0017_GETGolfCoursePlayers()[pri:17, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:22 PKT" name="TC0017_GETGolfCoursePlayers" finished-at="2022-12-26T11:12:23 PKT" duration-ms="944" status="PASS">
+        <test-method signature="TC0017_GETGolfCoursePlayers()[pri:17, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:09 PKT" name="TC0017_GETGolfCoursePlayers" finished-at="2022-12-27T12:59:09 PKT" duration-ms="977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0017_GETGolfCoursePlayers -->
-        <test-method signature="TC0018_GETGolfCourseRounds()[pri:18, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:23 PKT" name="TC0018_GETGolfCourseRounds" finished-at="2022-12-26T11:12:24 PKT" duration-ms="1396" status="PASS">
+        <test-method signature="TC0018_GETGolfCourseRounds()[pri:18, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:10 PKT" name="TC0018_GETGolfCourseRounds" finished-at="2022-12-27T12:59:11 PKT" duration-ms="1531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0018_GETGolfCourseRounds -->
-        <test-method signature="TC0019_GETGolfCourseNearby()[pri:19, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:24 PKT" name="TC0019_GETGolfCourseNearby" finished-at="2022-12-26T11:12:28 PKT" duration-ms="3922" status="PASS">
+        <test-method signature="TC0019_GETGolfCourseNearby()[pri:19, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:11 PKT" name="TC0019_GETGolfCourseNearby" finished-at="2022-12-27T12:59:18 PKT" duration-ms="7200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0019_GETGolfCourseNearby -->
-        <test-method signature="TC0020_GETGolfCourseActivities()[pri:20, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:28 PKT" name="TC0020_GETGolfCourseActivities" finished-at="2022-12-26T11:12:30 PKT" duration-ms="1494" status="PASS">
+        <test-method signature="TC0020_GETGolfCourseActivities()[pri:20, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:18 PKT" name="TC0020_GETGolfCourseActivities" finished-at="2022-12-27T12:59:20 PKT" duration-ms="1536" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0020_GETGolfCourseActivities -->
-        <test-method signature="TC0021_GETStrokeGainLastRound()[pri:21, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:30 PKT" name="TC0021_GETStrokeGainLastRound" finished-at="2022-12-26T11:12:30 PKT" duration-ms="492" status="PASS">
+        <test-method signature="TC0021_GETStrokeGainLastRound()[pri:21, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:20 PKT" name="TC0021_GETStrokeGainLastRound" finished-at="2022-12-27T12:59:20 PKT" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0021_GETStrokeGainLastRound -->
-        <test-method signature="TC0022_GETStrokeGainLastRound()[pri:22, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:30 PKT" name="TC0022_GETStrokeGainLastRound" finished-at="2022-12-26T11:12:31 PKT" duration-ms="476" status="PASS">
+        <test-method signature="TC0022_GETStrokeGainLastRound()[pri:22, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:20 PKT" name="TC0022_GETStrokeGainLastRound" finished-at="2022-12-27T12:59:21 PKT" duration-ms="466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0022_GETStrokeGainLastRound -->
-        <test-method signature="TC0023_GETApproachMissLastRound()[pri:23, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:31 PKT" name="TC0023_GETApproachMissLastRound" finished-at="2022-12-26T11:12:31 PKT" duration-ms="466" status="PASS">
+        <test-method signature="TC0023_GETApproachMissLastRound()[pri:23, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:21 PKT" name="TC0023_GETApproachMissLastRound" finished-at="2022-12-27T12:59:21 PKT" duration-ms="463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0023_GETApproachMissLastRound -->
-        <test-method signature="TC0024_GETApproachMissLastRound()[pri:24, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:31 PKT" name="TC0024_GETApproachMissLastRound" finished-at="2022-12-26T11:12:32 PKT" duration-ms="470" status="PASS">
+        <test-method signature="TC0024_GETApproachMissLastRound()[pri:24, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:21 PKT" name="TC0024_GETApproachMissLastRound" finished-at="2022-12-27T12:59:22 PKT" duration-ms="456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0024_GETApproachMissLastRound -->
-        <test-method signature="TC0025_GETApproachMissLastRound()[pri:25, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:32 PKT" name="TC0025_GETApproachMissLastRound" finished-at="2022-12-26T11:12:32 PKT" duration-ms="518" status="PASS">
+        <test-method signature="TC0025_GETApproachMissLastRound()[pri:25, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:22 PKT" name="TC0025_GETApproachMissLastRound" finished-at="2022-12-27T12:59:22 PKT" duration-ms="464" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0025_GETApproachMissLastRound -->
-        <test-method signature="TC0026_GETApproachMissLastRoundMinDistance150()[pri:26, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:32 PKT" name="TC0026_GETApproachMissLastRoundMinDistance150" description="Insights - Approach miss Last round min distance = 150" finished-at="2022-12-26T11:12:33 PKT" duration-ms="471" status="PASS">
+        <test-method signature="TC0026_GETApproachMissLastRoundMinDistance150()[pri:26, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:22 PKT" name="TC0026_GETApproachMissLastRoundMinDistance150" description="Insights - Approach miss Last round min distance = 150" finished-at="2022-12-27T12:59:23 PKT" duration-ms="538" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0026_GETApproachMissLastRoundMinDistance150 -->
-        <test-method signature="TC0027_GETApproachMissLastThreeRoundMaxDistance100()[pri:27, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:33 PKT" name="TC0027_GETApproachMissLastThreeRoundMaxDistance100" description="Insights - Approach miss Last three rounds max distance = 100" finished-at="2022-12-26T11:12:33 PKT" duration-ms="469" status="PASS">
+        <test-method signature="TC0027_GETApproachMissLastThreeRoundMaxDistance100()[pri:27, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:23 PKT" name="TC0027_GETApproachMissLastThreeRoundMaxDistance100" description="Insights - Approach miss Last three rounds max distance = 100" finished-at="2022-12-27T12:59:23 PKT" duration-ms="492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0027_GETApproachMissLastThreeRoundMaxDistance100 -->
-        <test-method signature="TC0028_GETApproachMissLastThreeRoundMaxDistance150()[pri:28, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:33 PKT" name="TC0028_GETApproachMissLastThreeRoundMaxDistance150" description="Insights - Approach miss Last three rounds max distance = 150 and min distance = 100" finished-at="2022-12-26T11:12:34 PKT" duration-ms="469" status="PASS">
+        <test-method signature="TC0028_GETApproachMissLastThreeRoundMaxDistance150()[pri:28, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:23 PKT" name="TC0028_GETApproachMissLastThreeRoundMaxDistance150" description="Insights - Approach miss Last three rounds max distance = 150 and min distance = 100" finished-at="2022-12-27T12:59:24 PKT" duration-ms="490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0028_GETApproachMissLastThreeRoundMaxDistance150 -->
-        <test-method signature="TC0029_GETApproachMissLastThreeRoundMinDistance150()[pri:29, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:34 PKT" name="TC0029_GETApproachMissLastThreeRoundMinDistance150" description="Insights - Approach miss Last three rounds min distance = 150" finished-at="2022-12-26T11:12:34 PKT" duration-ms="472" status="PASS">
+        <test-method signature="TC0029_GETApproachMissLastThreeRoundMinDistance150()[pri:29, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:24 PKT" name="TC0029_GETApproachMissLastThreeRoundMinDistance150" description="Insights - Approach miss Last three rounds min distance = 150" finished-at="2022-12-27T12:59:24 PKT" duration-ms="485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0029_GETApproachMissLastThreeRoundMinDistance150 -->
-        <test-method is-config="true" signature="GETLogoutUser()[pri:0, instance:apiAutomation.ApiAutomation@957e06]" started-at="2022-12-26T11:12:34 PKT" name="GETLogoutUser" finished-at="2022-12-26T11:12:35 PKT" duration-ms="696" status="PASS">
+        <test-method is-config="true" signature="GETLogoutUser()[pri:0, instance:apiAutomation.ApiAutomation@2c1b194a]" started-at="2022-12-27T12:59:24 PKT" name="GETLogoutUser" finished-at="2022-12-27T12:59:25 PKT" duration-ms="1146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GETLogoutUser -->

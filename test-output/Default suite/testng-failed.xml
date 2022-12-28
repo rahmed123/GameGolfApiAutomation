@@ -7,6 +7,7 @@
         <methods>
           <include name="GETLogoutUser"/>
           <include name="POSTLoginUser"/>
+          <include name="TC0001_GETUserStats"/>
           <include name="TC0029_GETApproachMissLastThreeRoundMinDistance150"/>
         </methods>
       </class> <!-- apiAutomation.ApiAutomation -->
