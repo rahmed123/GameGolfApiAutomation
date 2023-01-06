@@ -90,9 +90,45 @@ public class BaseClass {
 
 	}
 
+	//Get Request method
+	
+	
+	  public int GetAPI(String relativeURL,String dataType){ // Specify base URI
+	  RestAssured.baseURI = this.baseURI;
+	  
+	  // Creating an Object for request 
+	  RequestSpecification httpRequest =
+	  RestAssured.given();
+	  
+	  // Request Headers 
+	  httpRequest.header("Content-Type", dataType);
+	  httpRequest.header("Cookie", this.cookies);
+	  
+	  // Send Request and Get response
+	  
+	  //String 
+	  relativeURL = "api/stats/tee_miss?v=2&user_id="+this.userId+
+	  "&rounds_offset=0&rounds_limit=3";
+	  Response response =
+	  httpRequest.request(Method.GET, relativeURL);
+	  
+	  
+	  // Print Response in Console Window 
+	  String responseBody =
+	  response.getBody().asString();
+	  
+	  
+	  // System.out.println("Response Body is :" + responseBody);
+	  
+	  int code = response.getStatusCode();
+	  
+	  printLogs("GET", code, baseURI+relativeURL, responseBody); return code; }
+	 
+	
 	// Method for prinitng logs in extent report
 	public static void printLogs(String method, int code, String url, String response) {
 
+	
 		logger.log(Status.INFO, "<b>API Method : </b>" + method);
 		logger.log(Status.INFO, "<b>API Response Code : </b>" + code);
 		logger.log(Status.INFO, "<b>API URL : </b>" + url);

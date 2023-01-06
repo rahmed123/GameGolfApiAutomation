@@ -28,10 +28,7 @@ import utilities.ReportingListener;
 @Listeners(ReportingListener.class)
 public class ApiAutomation extends BaseClass {
 
-	
-
 	// Getting Session cookies and Creating Object for Extent Report
-	
 
 	@Test(priority = 1)
 	public void TC0001_GETUserStats() throws Exception {
@@ -48,13 +45,9 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-	
-	
-
 		// Sending request and getting response
 		String relativeURL = "api/user?with=user_stats";
 		Response response = httpRequest.request(Method.GET, relativeURL);
-
 
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
@@ -64,19 +57,17 @@ public class ApiAutomation extends BaseClass {
 		JsonPath jsonPath = response.jsonPath();
 		this.userId = jsonPath.get("user.id").toString();
 
-		
 		// Getting and validating Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 1: " + code);
-		
-		System.out.println("User id for Testcase 1: " + this.userId);
-		
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
-		
-		Assert.assertEquals(code,200);
 
-	
+		System.out.println("User id for Testcase 1: " + this.userId);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
+
+		Assert.assertEquals(code, 200);
 
 	}
 
@@ -93,11 +84,9 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Sending request and getting response
 		String relativeURL = "api/round?with=round_stats,golfcourse";
 		Response response = httpRequest.request(Method.GET, relativeURL);
-
 
 		// Print Response in Console Window
 		String responseBody = response.getBody().asPrettyString();
@@ -107,10 +96,11 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 2: " + code);
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
-		
-		Assert.assertEquals(code,200);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
+
+		Assert.assertEquals(code, 200);
 
 	}
 
@@ -129,30 +119,27 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/user/attribute_library?locale=en-US";
 		Response response = httpRequest.request(Method.GET, relativeURL);
-
 
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-		
-
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 3: " + code);
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
-		
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
+
 		Assert.assertEquals(200, code);
 	}
 
 	@Test(priority = 4)
-	public void TC0004_GETActivityFeed() throws InterruptedException {
+	public void TC0004_GETActivityFeed() {
 		// Extent Report
 
 		// Specify base URI
@@ -165,37 +152,35 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
-		String relativeURL = "api/activity_feed?id=" + this.userId + "&username=" + this.username
-				+ "&limit=10&offset=0&locale=en-US&group_by_story=1";
+		String relativeURL = "api/activity_feed?id="+this.userId+"&username="+this.username+"&limit=10&offset=0&locale=en-US&group_by_story=1";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-
+	
 		// Getting and Setting round id
 		JsonPath jsonPath = response.jsonPath();
 
-		this.roundId = jsonPath.get("activity[0].data.round_id").toString();
+		this.roundId = jsonPath.get("activity[5].data.round_id").toString();
 
+		System.out.println(roundId);
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
-
 
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 4: " + code);
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
-	
 	}
 
 	@Test(priority = 5)
 	public void TC0005_GETRecommendedUsers() {
-	
+
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -206,8 +191,6 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
-
 		// Send Request and Get response
 		String relativeURL = "api/user/recommended.json?limit=20&with=user_stats";
 		Response response = httpRequest.request(Method.GET, relativeURL);
@@ -215,7 +198,6 @@ public class ApiAutomation extends BaseClass {
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 
-	
 		// JsonPath jsonPath = response.jsonPath();
 
 		// System.out.println(jsonPath.get("resultset_info.limit"));
@@ -225,17 +207,17 @@ public class ApiAutomation extends BaseClass {
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 5 " + code);
-	
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-	
+
 	}
 
 	@Test(priority = 6)
 	public void TC0006_GETComments() {
-	
+
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -246,31 +228,27 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/round/" + this.roundId + "/comment?limit=3";
 		Response response = httpRequest.request(Method.GET, relativeURL);
-
 
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 6 " + code);
-		
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
-		Assert.assertEquals(200, code);
 
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
+		Assert.assertEquals(200, code);
 
 	}
 
 	@Test(priority = 7)
 	public void TC0007_POSTComments() {
-
 
 		// Specify base URI
 
@@ -287,7 +265,6 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-		
 		// Request Body
 		httpRequest.body(requestParams.toJSONString());
 
@@ -302,18 +279,17 @@ public class ApiAutomation extends BaseClass {
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 7 " + code);
-		
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("POST",code,baseURI+relativeURL,responseBody);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("POST", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
-		
 	}
 
 	@Test(priority = 8)
 	public void TC0008_GETFollowings() {
 
-	
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -332,20 +308,19 @@ public class ApiAutomation extends BaseClass {
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 8 " + code);
-		
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 	}
 
 	@Test(priority = 9)
 	public void TC0009_GETFollowers() {
 
-		
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -360,20 +335,18 @@ public class ApiAutomation extends BaseClass {
 		String relativeURL = "api/following?limit=0&with=user_stats";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-		
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-		
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 9 " + code);
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -430,21 +403,19 @@ public class ApiAutomation extends BaseClass {
 		String relativeURL = "api/user/jmfloop/profile";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
-
 
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 10 " + code);
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
-	
-		Assert.assertEquals(200, code);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 
+		Assert.assertEquals(200, code);
 
 	}
 
@@ -461,7 +432,6 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/user/gmac/profile";
 		Response response = httpRequest.request(Method.GET, relativeURL);
@@ -470,16 +440,14 @@ public class ApiAutomation extends BaseClass {
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 11 " + code);
-	
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -496,7 +464,6 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/user/leew/profile";
 		Response response = httpRequest.request(Method.GET, relativeURL);
@@ -509,11 +476,10 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 12 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -552,18 +518,16 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 13 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("POST",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("POST", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
 	@Test(priority = 14)
 	public void TC0014_GETCompareAllRounds() {
 
-
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -574,33 +538,28 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/stats/series?user_id=218263";
 		Response response = httpRequest.request(Method.GET, relativeURL);
-
 
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 14 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
 	@Test(priority = 15)
 	public void TC0015_GETCompareLastTenRounds() {
 
-
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -611,24 +570,21 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/stats/user?user_id=218263&from_offset=0&to_offset=9";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-		
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
-
 
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 15 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
@@ -658,11 +614,10 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 16 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -691,18 +646,16 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 17 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
 	@Test(priority = 18)
 	public void TC0018_GETGolfCourseRounds() {
 
-	
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -712,7 +665,6 @@ public class ApiAutomation extends BaseClass {
 		// Request Headers
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
-
 
 		// Send Request and Get response
 		String relativeURL = "api/golfcourse/605/rounds?limit=25&sort=stats.normalized_under_over:asc";
@@ -726,18 +678,16 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 18 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
 	@Test(priority = 19)
 	public void TC0019_GETGolfCourseNearby() {
 
-	
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -760,11 +710,10 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 19 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -781,12 +730,10 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-
 		// Send Request and Get response
 		String relativeURL = "api/golfcourse/605/activity?courseid=605&limit=10&offset=0&group_by_story=1&locale=en-US";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-	
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
@@ -794,10 +741,10 @@ public class ApiAutomation extends BaseClass {
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 20 " + code);
-		
 
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
@@ -805,7 +752,6 @@ public class ApiAutomation extends BaseClass {
 	@Test(priority = 21)
 	public void TC0021_GETStrokeGainLastRound() {
 
-	
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
 
@@ -827,16 +773,16 @@ public class ApiAutomation extends BaseClass {
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 21 " + code);
-		
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
 
 	@Test(priority = 22)
 	public void TC0022_GETStrokeGainLastRound() {
-
 
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
@@ -860,11 +806,10 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 22 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -890,16 +835,14 @@ public class ApiAutomation extends BaseClass {
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
 
-		
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 23 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
-
 
 	}
 
@@ -916,33 +859,29 @@ public class ApiAutomation extends BaseClass {
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
 
-		
 		// Send Request and Get response
 
 		String relativeURL = "api/stats/approach_miss?v=2&user_id=" + this.userId
 				+ "&rounds_offset=0&rounds_limit=1&max_distance=150&min_distance=100";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-	
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
-
 
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 24 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
 
 	@Test(priority = 25)
 	public void TC0025_GETApproachMissLastRound() {
-
 
 		// Specify base URI
 		RestAssured.baseURI = this.baseURI;
@@ -953,7 +892,6 @@ public class ApiAutomation extends BaseClass {
 		// Request Headers
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.header("Cookie", this.cookies);
-
 
 		// Send Request and Get response
 
@@ -969,9 +907,9 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 25 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
@@ -1002,14 +940,12 @@ public class ApiAutomation extends BaseClass {
 		// Getting Response Code
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 26 " + code);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
-		// Displaying Testcase Status in extend report on the basis of status code
-		if (code == 200) {
-			ReportingListener.onSuccess("GET", relativeURL, responseBody);
-		} else {
-			System.out.println("Test case failed ");
-		}
 	}
 
 	@Test(priority = 27, description = "Insights - Approach miss Last three rounds max distance = 100")
@@ -1031,7 +967,6 @@ public class ApiAutomation extends BaseClass {
 				+ "&rounds_offset=0&rounds_limit=3&max_distance=100";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-	
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
@@ -1040,9 +975,9 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 27 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
@@ -1074,9 +1009,9 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 28 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(200, code);
 
 	}
@@ -1100,7 +1035,6 @@ public class ApiAutomation extends BaseClass {
 				+ "&rounds_offset=0&rounds_limit=3&min_distance=150";
 		Response response = httpRequest.request(Method.GET, relativeURL);
 
-
 		// Print Response in Console Window
 		String responseBody = response.getBody().asString();
 		// System.out.println("Response Body is :" + responseBody);
@@ -1109,12 +1043,92 @@ public class ApiAutomation extends BaseClass {
 		int code = response.getStatusCode();
 		System.out.println("Response Code for Testcase 29 " + code);
 
-
-		// for printing logs in extent report- using below method which one available in base class
-		printLogs("GET",code,baseURI+relativeURL,responseBody);
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
 		Assert.assertEquals(code, 200);
 	}
 
+	@Test(priority = 30, description = "Insights - Tee miss for last round ")
+	public void TC0030_GETApproachTeeMissLastRound() {
 
+		// Specify base URI
+		RestAssured.baseURI = this.baseURI;
 
+		// Creating an Object for request
+		RequestSpecification httpRequest = RestAssured.given();
+
+		// Request Headers
+		httpRequest.header("Content-Type", "application/json");
+		httpRequest.header("Cookie", this.cookies);
+
+		// Send Request and Get response
+
+		String relativeURL = "api/stats/tee_miss?v=2&user_id=" + this.userId + "&rounds_offset=0&rounds_limit=1";
+		Response response = httpRequest.request(Method.GET, relativeURL);
+
+		// Print Response in Console Window
+		String responseBody = response.getBody().asString();
+		// System.out.println("Response Body is :" + responseBody);
+
+		// Getting Response Code
+		int code = response.getStatusCode();
+		System.out.println("Response Code for Testcase 30 " + code);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
+		Assert.assertEquals(code, 200);
+	}
+
+	@Test(priority = 31, description = "Insights - Tee miss for last three rounds ")
+	public void TC0031_GETApproachTeeMissLastThreeRound() {
+
+		// Specify base URI
+		RestAssured.baseURI = this.baseURI;
+
+		// Creating an Object for request
+		RequestSpecification httpRequest = RestAssured.given();
+
+		// Request Headers
+		httpRequest.header("Content-Type", "application/json");
+		httpRequest.header("Cookie", this.cookies);
+
+		// Send Request and Get response
+
+		String relativeURL = "api/stats/tee_miss?v=2&user_id=" + this.userId + "&rounds_offset=0&rounds_limit=3";
+		Response response = httpRequest.request(Method.GET, relativeURL);
+
+		// Print Response in Console Window
+		String responseBody = response.getBody().asString();
+		// System.out.println("Response Body is :" + responseBody);
+
+		// Getting Response Code
+		int code = response.getStatusCode();
+		System.out.println("Response Code for Testcase 31 " + code);
+
+		// for printing logs in extent report- using below method which one available in
+		// base class
+		printLogs("GET", code, baseURI + relativeURL, responseBody);
+		Assert.assertEquals(code, 200);
+	}
+
+	@Test(priority = 32, description =
+	  "Insights - Tee miss for last three rounds")
+	
+	public void TC0032_GETApproachTeeMissLastThreeRound() {
+	  
+	  // Relative URL. 
+		  String relativeURL ="api/stats/tee_miss?v=2&user_id="+this.userId+"&rounds_offset=0&rounds_limit=3";
+	  
+	  //Call method of GET API and pass relative url and datatype
+	  
+	  int code=GetAPI(relativeURL, "application/json");
+			  
+	  System.out.println("Response Code for Testcase 32 " + code);
+	  
+	  // Apply assertion on response code 
+	  Assert.assertEquals(code, 200);
+	  }
+	 
 }

@@ -5,10 +5,10 @@
     <classes>
       <class name="apiAutomation.ApiAutomation">
         <methods>
+          <include name="TC0006_GETComments"/>
           <include name="GETLogoutUser"/>
           <include name="POSTLoginUser"/>
-          <include name="TC0001_GETUserStats"/>
-          <include name="TC0029_GETApproachMissLastThreeRoundMinDistance150"/>
+          <include name="TC0007_POSTComments"/>
         </methods>
       </class> <!-- apiAutomation.ApiAutomation -->
     </classes>

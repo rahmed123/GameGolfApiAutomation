@@ -55,28 +55,7 @@ public class ReportingListener extends BaseClass implements ITestListener {
 		logger.log(Status.PASS, result.getMethod().getDescription());
 	}
 
-	public static void onSuccess(String method, String apiUrl, String response) { // create new entry in the report
 
-		logger.log(Status.INFO, "Request Method: " + method);
-		logger.log(Status.INFO, "Request URL: " + apiUrl);
-		logger.log(Status.INFO, "Request response: " + response);
-		logger.log(Status.PASS, "Test Successfully executed ");
-
-	}
-
-	/*
-	 * public static void onTestFailure(String method,String apiUrl, String
-	 * response) throws IOException { // create new entry in the report
-	 * 
-	 * logger.log(Status.INFO,"Request Method: " + method );
-	 * logger.log(Status.INFO,"Request URL: " + apiUrl );
-	 * logger.log(Status.INFO,"Request response: " + response );
-	 * logger.log(Status.FAIL,"Test Failed");
-	 * 
-	 * }
-	 */
-
-	// On test fail
 
 	public void onTestFailure(ITestResult result) {
 		logger.log(Status.FAIL, result.getMethod().getDescription());
